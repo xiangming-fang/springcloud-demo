@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: feign
+
+server:
+  port: 8089
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://peer1:8054/eureka,http://peer2:8055/eureka
+# feign 中自带断路器 hystrix ，但是默认是不打开的，这里给开启
+feign:
+  hystrix:
+    enabled: true
+

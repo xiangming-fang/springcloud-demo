@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="feign" />
+        <module name="zuul" />
+        <module name="ribbon" />
+        <module name="euraka_client" />
+        <module name="euraka_server" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="euraka_client" target="1.8" />
+      <module name="euraka_server" target="1.8" />
+      <module name="feign" target="1.8" />
+      <module name="hello_server" target="1.8" />
+      <module name="ribbon" target="1.8" />
+      <module name="zuul" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="euraka_client" options="-parameters" />
+      <module name="euraka_server" options="-parameters" />
+      <module name="feign" options="-parameters" />
+      <module name="hello_server" options="-parameters" />
+      <module name="ribbon" options="-parameters" />
+      <module name="zuul" options="-parameters" />
+    </option>
+  </component>
+</project>

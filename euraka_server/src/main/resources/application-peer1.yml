@@ -1,0 +1,11 @@
+server:
+  port: 8054
+
+eureka:
+  instance:
+    hostname: peer1
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    service-url:
+      defaultZone: http://peer2:8055/eureka

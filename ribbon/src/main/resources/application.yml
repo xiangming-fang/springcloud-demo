@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: ribbon-consumer
+
+server:
+  port: 8088
+
+hello:
+  service-url-one: http://peer1:8081/printHi
+  service-url-two: http://peer2:8082/printHello
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://peer1:8054/eureka,http://peer2:8055/eureka

@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: zuul-proxy
+
+server:
+  port: 8090
+
+# zuul网关的路由用法
+zuul:
+  routes:
+    # 以eureka_client开头的请求转发给EURAKA-CLIENT服务，这里的EURAKA-CLIENT是eureka-server中的服务名
+    eureka_client:
+      path: /eureka_client/**
+      serviceId: EURAKA-CLIENT
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://peer1:8054/eureka,http://peer2:8055/eureka
